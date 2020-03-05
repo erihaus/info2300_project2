@@ -28,8 +28,11 @@ I will include the search bar and categories the user can filter by at the top o
 > Label all images. All labels must be visible in VS Code's Markdown Preview.
 > Clearly label the final design.
 ![First Design Sketch](first.jpg)
-
+First Design Sketch. Filters are below the search.
 ![Second sketch on left and final on right](second.jpg)
+Second sketch on the left and final sketch on the right. Decided to change filters into dropdown menus and changed placement of
+dropdown menus to be next to the search bar because most users will use filters when searching. Decided to use icons to show the values
+instead of text only to make it more legible.
 
 ## Partials (Milestone 2)
 > If you have any partials, plan them here.
