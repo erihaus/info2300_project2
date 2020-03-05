@@ -27,18 +27,31 @@ I will include the search bar and categories the user can filter by at the top o
 > Document your design process. Show us the evolution of your design from your first idea (sketch) to design you wish to implement (sketch). Show us the process you used to organize content and plan the navigation, if applicable.
 > Label all images. All labels must be visible in VS Code's Markdown Preview.
 > Clearly label the final design.
+![First Design Sketch](first.jpg)
 
+![Second sketch on left and final on right](second.jpg)
 
 ## Partials (Milestone 2)
 > If you have any partials, plan them here.
-
+I will have a navigation bar partial on every page of the website. The table of
+organizations and groups on campus
+will be a partial itself that updates with new data based on the filters
+selected by the user.
 
 ## Database Schema (Milestone 2)
 > Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this. Make sure you include constraints for each field.
 
-Table: movies
-- field 1: description..., constraints...
-- field...
+Table: clubs
+-Name: name of organization or club, text and not null
+-Link: Website URl of club, no constraint
+-Category: More broad category club falls into, text and not null
+-Subcategory: Subcategory club falls in, text and not null
+-Commitment: how many hours per week the club requires members to put in on average, integer and not null
+-Frequency: how often club meets (biweekly or weekly, etc.), text and not null
+-Day: day of the week club meets, text
+-Time: time that club meets including AM or PM, text
+-Location: where the club meets, text
+-Application: whether an application is required, text and not null
 
 
 ## Database Query Plan (Milestone 2)
@@ -46,26 +59,23 @@ Table: movies
 
 1. All records
 
-    ```
-    TODO
-    ```
-
+SELECT * from clubs;
 2. Search records
 
-    ```
-    TODO
-    ```
+Select clubs that have a field with a value equal to the value searched by the user
+
 
 3. Insert record
 
-    ```
-    TODO
-    ```
-
+INSERT INTO clubs (Name, Link, Category, Subcategory, Commitment, Frequency, Day, Time, Location, Application)
+VALUES ('Medium Design Collective', null, 'Professional', 'Design', 5, 'weekly', 'Saturday', '3 PM', 'Sibley Hall', 'yes');
 
 ## Code Planning (Milestone 2)
 > Plan any PHP code you'll need here.
-
+To search records:
+SELECT * from clubs WHERE (NAME = "input") OR (LINK="input") OR (CATEGORY="input") ....
 
 # Reflection (Final Submission)
 > Take this time to reflect on what you learned during this assignment. How have you improved since Project 1? What things did you have trouble with?
+I have improved in considering the usability of an interface, how to prioritze information that the user wants through design, and
+how to think of the information users want most. I had trouble with resisting the urge to just erase parts of my design while drawing it. Instead, I should finish a full iteration of the design and make changes in the next iteration to show my progress and also test every idea I have and see how it looks before eliminating it as an option.
