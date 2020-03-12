@@ -17,7 +17,7 @@ My target audiences will be students who are interested in joining a new club on
 
 ### Design Patterns (Milestone 1)
 > Review some existing catalog that are similar to yours. List the catalog's you reviewed here. Write a small reflection on how you might use the design patterns you identified in your review in your own catalog.
-[Cornell CampusGroups](https://cornell.campusgroups.com/club_signup "Cornell CampusGroups Catalog")
+* [Cornell CampusGroups](https://cornell.campusgroups.com/club_signup "Cornell CampusGroups Catalog")
 
 I will include the search bar and categories the user can filter by at the top of the page like Cornell CampusGroups did. Then, the search bar will be the first thing the user sees. This is important because most users will probably want to use the filter or search functionality instead of searching through the entire list of clubs. They will want to filter the clubs to only see the clubs related to their major or career path. Instead of just displaying the URL, each club also has a button for their website so the user can easily visit it. The user must click on the name of the club to be directed to a page with more information about it. This is a better alternative to displaying the description of every club in the catalog, which would look crowded and dense.
 
