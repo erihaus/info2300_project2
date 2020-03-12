@@ -17,7 +17,7 @@ My target audiences will be students who are interested in joining a new club on
 
 ### Design Patterns (Milestone 1)
 > Review some existing catalog that are similar to yours. List the catalog's you reviewed here. Write a small reflection on how you might use the design patterns you identified in your review in your own catalog.
-* Cornell CampusGroups Catalog
+[Cornell CampusGroups](https://cornell.campusgroups.com/club_signup "Cornell CampusGroups Catalog")
 
 I will include the search bar and categories the user can filter by at the top of the page like Cornell CampusGroups did. Then, the search bar will be the first thing the user sees. This is important because most users will probably want to use the filter or search functionality instead of searching through the entire list of clubs. They will want to filter the clubs to only see the clubs related to their major or career path. Instead of just displaying the URL, each club also has a button for their website so the user can easily visit it. The user must click on the name of the club to be directed to a page with more information about it. This is a better alternative to displaying the description of every club in the catalog, which would look crowded and dense.
 
@@ -29,7 +29,7 @@ I will include the search bar and categories the user can filter by at the top o
 > Clearly label the final design.
 ![First Design Sketch](first.jpg)
 First Design Sketch. Filters are below the search.
-![Second sketch on left and final on right](second.jpg)
+![Second sketch on left and final on right](second.jpeg)
 Second sketch on the left and final sketch on the right. Decided to change filters into dropdown menus and changed placement of
 dropdown menus to be next to the search bar because most users will use filters when searching. Decided to use icons to show the values
 instead of text only to make it more legible.
@@ -45,16 +45,12 @@ selected by the user.
 > Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this. Make sure you include constraints for each field.
 
 Table: clubs
--Name: name of organization or club, text and not null
--Link: Website URl of club, no constraint
--Category: More broad category club falls into, text and not null
--Subcategory: Subcategory club falls in, text and not null
--Commitment: how many hours per week the club requires members to put in on average, integer and not null
--Frequency: how often club meets (biweekly or weekly, etc.), text and not null
--Day: day of the week club meets, text
--Time: time that club meets including AM or PM, text
--Location: where the club meets, text
--Application: whether an application is required, text and not null
+-name: name of organization or club, TEXT and NOT NULL and UNIQUE
+-link: Website URl of club, TEXT and UNIQUE
+-category: More broad category club falls into, TEXT and NOT NULL
+-commitment: how many hours per week the club requires members to put in on average, INT and NOT NULL
+-frequency: how often club meets (biweekly or weekly, etc.), TEXT and NOT NULL
+-application: whether an application is required, TEXT and NOT NULL
 
 
 ## Database Query Plan (Milestone 2)
@@ -70,8 +66,8 @@ Select clubs that have a field with a value equal to the value searched by the u
 
 3. Insert record
 
-INSERT INTO clubs (Name, Link, Category, Subcategory, Commitment, Frequency, Day, Time, Location, Application)
-VALUES ('Medium Design Collective', null, 'Professional', 'Design', 5, 'weekly', 'Saturday', '3 PM', 'Sibley Hall', 'yes');
+INSERT INTO clubs (name, link, category, commitment, frequency, application)
+VALUES ('Medium Design Collective', null, 'Professional', 'Design', 5, 'weekly', 'yes');
 
 ## Code Planning (Milestone 2)
 > Plan any PHP code you'll need here.
