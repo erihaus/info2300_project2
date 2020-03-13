@@ -3,6 +3,12 @@ $title = "Home";
 $db = open_sqlite_db("secure/catalog.sqlite");
 $messages = array();
 
+function loop($values)
+{
+  foreach ($values as $value) {
+    echo "<option value=\"" . htmlspecialchars($value) . "\">" . htmlspecialchars($value) . "</option>";
+  }
+}
 function print_record($record)
 {
 ?>
@@ -131,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach ($messages as $message) {
       echo "<p><strong>" . htmlspecialchars($message) . "</strong></p>\n";
     }
-    f
+
     ?>
 
     <form id="searchForm" action="index.php" method="get" novalidate>
@@ -230,9 +236,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <select name="category" required>
           <option value="" selected disabled>Choose Category</option>
           <?php
-          foreach ($categories as $cat) {
-            echo "<option value=\"" . htmlspecialchars($cat) . "\">" . htmlspecialchars($cat) . "</option>";
-          }
+          loop($categories);
           ?>
         </select>
       </div>
@@ -247,9 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <select name="frequency" required>
           <option value="" selected disabled>Choose Frequency</option>
           <?php
-          foreach ($frequencies as $freq) {
-            echo "<option value=\"" . htmlspecialchars($freq) . "\">" . htmlspecialchars($freq) . "</option>";
-          }
+          loop($frequencies);
           ?>
         </select>
       </div>
@@ -258,9 +260,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <select name="application" required>
           <option value="" selected disabled>Choose response</option>
           <?php
-          foreach ($applications as $app) {
-            echo "<option value=\"" . htmlspecialchars($app) . "\">" . htmlspecialchars($app) . "</option>";
-          }
+          loop($applications);
           ?>
         </select>
       </div>
@@ -268,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <div>
         <span>
           <!-- empty element; used to align submit button --></span>
-        <button type="submit">Add Club</button>
+        <button id="add" type="submit">Add Club</button>
       </div>
     </form>
   </div>

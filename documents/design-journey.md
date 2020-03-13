@@ -28,7 +28,7 @@ I will include the search bar and categories the user can filter by at the top o
 > Label all images. All labels must be visible in VS Code's Markdown Preview.
 > Clearly label the final design.
 ![First Design Sketch](first.jpg)
-First Design Sketch. Filters are below the search.
+First Design Sketch. Filters are below the search. I put the search bar at the top so the user knows it exists and understands that they should use it. I made sure to list the name of the club first before any other information. I included the title of the website on the navigation bar and an option to move the home page or an about page. I decided not to add an about page because the website is self-explanatory.
 ![Second sketch on left and final on right](second.jpeg)
 Second sketch on the left and final sketch on the right. Decided to change filters into dropdown menus and changed placement of
 dropdown menus to be next to the search bar because most users will use filters when searching. Decided to use icons to show the values
@@ -36,10 +36,7 @@ instead of text only to make it more legible.
 
 ## Partials (Milestone 2)
 > If you have any partials, plan them here.
-I will have a navigation bar partial on every page of the website. The table of
-organizations and groups on campus
-will be a partial itself that updates with new data based on the filters
-selected by the user.
+I will have a navigation bar partial on every page of the website. I will also have a footer partial.
 
 ## Database Schema (Milestone 2)
 > Describe the structure of your database. You may use words or a picture. A bulleted list is probably the simplest way to do this. Make sure you include constraints for each field.
